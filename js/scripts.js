@@ -34,7 +34,7 @@ $(document).ready(function(){
    event.preventDefault();
     var newType  = $("#pizzaType :selected" ).val();
     var newSize  = parseInt($("#pizzaSize :selected").val());
-    debugger;
+
     $("#slices").text(newPizza.numSlices(newType,newSize));
 
 
