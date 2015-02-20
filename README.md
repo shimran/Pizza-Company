@@ -17,6 +17,8 @@ Future Functionality:
 
 This app is a work in progress. Currently the ShimCity Pizza Co. only offers two styles of pie in order to preserve its heritage and for quality control. However, future toppings may be added in the future.
 
+Currently, the object prototype has .type and .size properties that are not being used. Future JQuery coding could utilize these elements or change the elements.
+
 Price computation functionality will be added in future releases of this app. Furthermore, future provisions for online payment and ordering options can be added and a back-end queue system can be built.
 
 With future database usage, client information and previous orders can be managed for potential returns or order cancellations.  
