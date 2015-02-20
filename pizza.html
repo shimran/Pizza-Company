@@ -11,23 +11,27 @@
       ShimCity Pizza Co.
   </title>
   </head>
-  <center><h2>Welcome to ShimCity Pizza Co!</h2></center>
-  <h3>Enter your size pizza, and choice of topping and the number of slices will appear.<h3>
+  <center><h2>Welcome to ShimCity Pizza Co.!</h2></center>
+  <h3>Select a pizza size and choice of topping. Then information regarding the number of slices in each will appear.<h3>
   <body>
-    <form id="numberOfSlices">
-  <select>
-  <option value="small">Small (10")</option>
-  <option value="saab">Medium (11")</option>
-  <option value="mercedes">Large (12")</option>
 
-</select>
-    <select>
-  <option value="cheese">Cheese</option>
-  <option value="pepperoni">Pepperoni</option>
+  <form id="numberOfSlices">
+    <select id="pizzaSize">
+    <option value="10">Small (10")</option>
+    <option value="11">Medium (11")</option>
+    <option value="12">Large (12")</option>
+    </select>
 
-</select
-    </form>
+    <select id= "pizzaType">
+    <option value="Cheese">Cheese</option>
+    <option value="Pepperoni">Pepperoni</option>
+  </select><br>
 
+    <button type="submit"> Check Slices</button>
 
+  </form>
+
+ <h2>Number of Slices:</h2>
+    <h2> This pizza has <span id="slices"></span> slices </h2>
   </body>
 </html>

@@ -1,25 +1,24 @@
-var newType;
-var newSize;
+
 var Pizza = {
   type: "",
   size: 0,
   numSlices: function(newType,newSize) {
-    this.type= newType
+    this.type = newType;
     this.size = newSize;
     var slices=0;
-    if(newType==="cheese"&& newSize === 10)
+    if (newType == "Cheese" && newSize === 10){
     return slices+=8;
-    else if(newType=="cheese" && newSize == 11)
+    }else if(newType == "Cheese" && newSize === 11){
       return slices+=10;
-    else if(newType=="cheese" && newSize == 12)
+    }else if(newType == "Cheese" && newSize === 12){
       return slices+=12;
-    else if(newType=="pepperoni" && newSize == 10)
+    }else if(newType == "Pepperoni" && newSize === 10){
       return slices+=6;
-    else if(newType=="pepperoni" && newSize == 11)
+    }else if(newType == "Pepperoni" && newSize === 11){
       return slices+=8;
-    else if(newType=="pepperoni" && newSize == 12)
+    }else if(newType == "Pepperoni" && newSize === 12){
       return slices+=10;
-    else{
+    }else{
       return "ERROR: Please choose an appropriate topping and size";
     }
 
@@ -28,23 +27,17 @@ var Pizza = {
 
 var newPizza = Object.create(Pizza);
 
-//    numSlices: function() {
-//        if(cheese && small){
-//        = this.weight * this.distance;
-//        return rate;
-//       }
-// };
-//
-// //
-// // $(document).ready(function(){
-//   $('form#shipment').submit(function(event){
-//
-//     shipment.weight = parseFloat($("input#weight").val());
-//     shipment.distance = parseFloat($("input#distance").val());
-//
-//     $("#rate").text(shipment.rate());
-//
-//     event.preventDefault();
-//   });
 
-//});
+
+$(document).ready(function(){
+ $('form#numberOfSlices').submit(function(event){
+   event.preventDefault();
+    var newType  = $("#pizzaType :selected" ).val();
+    var newSize  = parseInt($("#pizzaSize :selected").val());
+    debugger;
+    $("#slices").text(newPizza.numSlices(newType,newSize));
+
+
+   });
+
+});
